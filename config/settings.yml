@@ -1,0 +1,12 @@
+defaults: &defaults
+  site_domain_www: https://api.xishi.info
+  site_domain: 54.200.34.187
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

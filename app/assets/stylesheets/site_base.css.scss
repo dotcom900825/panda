@@ -1,0 +1,58 @@
+body{
+  padding-top: 50px;
+}
+
+.hero{
+  padding: 30px 0 40px 0;
+  text-align: center;
+}
+
+.ptable{
+  border-top: 1px solid #8d8d8d;
+  padding: 40px 0;
+  text-align: center;
+
+ .ptable-content{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 20px 0;
+    max-width: 270px;
+
+    h3{
+      padding-bottom: 12px;
+    }
+
+    p{
+      margin: 10px 0 20px 0;
+      color: #aaa;
+      font-size: 13px;
+      font-style: italic;
+    }
+    .benefit-header{
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      background: #71c9e1;
+      color: #fff;
+      border-right: 1px solid #71c9e1;
+      border-left: 1px solid #71c9e1;
+    }
+    .list{
+      list-style: none;
+      padding: 0;
+      color: #999;
+
+      li{
+        padding: 15px 0 15px 0;
+        border-bottom: 1px dashed #ccc;
+        font-style: italic;
+        font-size: 13px;
+      }
+
+    }
+  }
+
+}

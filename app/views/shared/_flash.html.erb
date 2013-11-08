@@ -1,0 +1,10 @@
+<div class="alert-messages " id="message-drawer">
+  <% flash.each do |key, value| %>
+    <div class="message <%= flash_class(key) %>">
+      <div class="message-inside">
+        <span class="message-text"><%= value %></span>
+        <a class='dismiss' href='javascript:;'>×</a>
+      </div>
+    </div>
+  <% end %>
+</div>
