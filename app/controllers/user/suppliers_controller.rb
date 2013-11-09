@@ -1,4 +1,4 @@
-class SuppliersController < ApplicationController
+class User::SuppliersController < ApplicationController
   def new
     @supplier = Supplier.new
   end
@@ -14,6 +14,10 @@ class SuppliersController < ApplicationController
         format.html { render action: 'new' }
       end
     end
+  end
+
+  def learn_more
+
   end
 
   private

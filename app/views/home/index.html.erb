@@ -1,8 +1,8 @@
 <div class="hero">
   <div class="container">
     <div class="hero-head">
-      <h1 class="hero-h1 animated animation fadeInLeft">We help you sell your products</h1>
-      <p class="hero-p animated animation fadeInRight">The standard chunk of lorem ipsum used since the hello is reproduced below for those ipsum used since the interested de Cicero</p>
+      <%= content_tag(:h1, t('front_page.tagline'), :class=>'hero-h1 animated animation fadeInLeft')%>
+      <%= content_tag(:p, t('front_page.description'), :class=>'hero-p animated animation fadeInRight')%>
     </div>
   <span id="service"></span>
   </div>
@@ -11,43 +11,11 @@
 <div class="ptable">
   <div class="container">
     <!-- Pricing heading and paragraph -->
-    <h2 class="head">Pricing</h2>
-    <p class="para">Et harum quidem rerum et expedita distinctio.</p>
     <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <!-- Pricing table list -->
-        <div class="phighlight ptable-content animated animation bounceIn">
-          <!-- Heading of item -->
-          <h3>Are you a supplier?</h3>
-          <!-- Item cost -->
-          <span class="benefit-header">Supplier Benefits</span>
-          <!-- Item features list -->
-          <ul class="list">
-            <li>1200 Pages</li>
-            <li>20 Stories</li>
-            <li>24/7 Support</li>
-          </ul>
-          <!-- Buy now button -->
-          <%= link_to 'Create account', new_supplier_path, :class=>'btn btn-info'%>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <!-- Pricing table list -->
-        <div class="ptable-content animated animation bounceIn">
-          <!-- Heading of item -->
-          <h3>Are you a distributor?</h3>
-          <!-- Item cost -->
-          <span class="benefit-header">Distributor Benefits</span>
-          <!-- Item features list -->
-          <ul class="list">
-            <li>1700 Pages</li>
-            <li>28 Stories</li>
-            <li>24/7 Support</li>
-          </ul>
-          <!-- Buy now button -->
-          <%= link_to 'Create account', new_distributor_path, :class=>'btn btn-info'%>
-        </div>
-      </div>
+      <%= render 'home/description_table', :description=>{:question=>t('front_page.supplier_question'), :benefit=>t("front_page.supplier_benefits"), :url=>new_user_supplier_path, :learn_more_url=>learn_more_user_suppliers_path}%>
+
+      <%= render 'home/description_table', :description=>{:question=>t("front_page.distributor_question"), :benefit=>t("front_page.distributor_benefits"), :url=>new_user_distributor_path, :learn_more_url=>learn_more_user_distributors_path}%>
+
     </div>
     <span id="contact"></span>
   </div>

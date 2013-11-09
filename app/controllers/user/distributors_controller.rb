@@ -1,4 +1,4 @@
-class DistributorsController < ApplicationController
+class User::DistributorsController < ApplicationController
   def new
     @distributor = Distributor.new
   end
@@ -14,6 +14,10 @@ class DistributorsController < ApplicationController
         format.html { render action: 'new' }
       end
     end
+  end
+
+  def learn_more
+
   end
 
   private

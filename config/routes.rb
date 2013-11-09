@@ -5,9 +5,25 @@ ProjectY::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  resources :distributors
-  resources :suppliers
-  resources :sessions
+  namespace :user do
+
+    resources :distributors, only: [:create, :new] do
+      get 'learn_more', :on => :collection
+    end
+
+    resources :suppliers, only: [:create, :new] do
+      get 'learn_more', :on => :collection
+    end
+  end
+
+  resources :sessions, only: [:create, :destroy, :new]
+
+  resources :languages, :only=>[] do
+    collection do
+      get 'english'
+      get 'chinese'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

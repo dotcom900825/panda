@@ -47,6 +47,9 @@ gem "paperclip"
 # configuration setting
 gem 'settingslogic'
 
+#user language detect
+gem 'http_accept_language', '~> 1.0.2'
+
 
 
 # Use ActiveModel has_secure_password

@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a href="../" class="navbar-brand">Pandexa</a>
+      <%= link_to t('site.title'), root_path, :class=>'navbar-brand' %>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -9,12 +9,13 @@
       </button>
     </div>
     <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-
-      </ul>
-
+      <ol class="breadcrumb">
+        <li><%= link_to_unless I18n.locale == 'en', "English", english_languages_path %></li>
+        <li><%= link_to_unless I18n.locale == 'zh-CN', "简体中文", chinese_languages_path %>
+        </li>
+      </ol>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Login', new_session_path%></li>
+        <li><%= link_to t('user.login'), new_session_path%></li>
       </ul>
 
 
