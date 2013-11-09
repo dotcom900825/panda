@@ -77,4 +77,8 @@ ProjectY::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.assets.precompile += %w( site_3rd_base.js site_base.js )
+  config.assets.precompile += %w( site_3rd_base.css site_base.css site_total.css )
+
 end
